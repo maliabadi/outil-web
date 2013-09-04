@@ -3,16 +3,17 @@ OutilWeb::Application.routes.draw do
   devise_for :users
   root :to => "landing#index"
 
+  devise_scope :user do
+    get "/register" => "devise/registrations#new", :as =>:register
+    get "/login" => "devise/sessions#new", :as => :login
+  end
+
   get "api/publish"
   get "api/localize"
   get "api/authenticate"
   get "api/take"
 
-  get "register/start"
-  post "register/submit"
-  get "register/success"
-
-  get "dashboard" => 'dashboard#index'
+  get "dashboard" => 'dashboard#index', :as => :dashboard
 
   get "login" => 'login#index'
   post "login/submit"
