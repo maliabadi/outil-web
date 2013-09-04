@@ -1,0 +1,5 @@
+<div id='utility-list-with-buttons'>
+  <% utilities.each do |util| %>
+    <%= render partial: 'shared/utility_with_button', locals: {utility: util, user: @user} %>
+  <% end %>
+</div>

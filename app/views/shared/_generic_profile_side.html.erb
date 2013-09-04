@@ -1,0 +1,21 @@
+<div class="profile-generic-sidebar">
+  <div id='profile-username'>
+    <%= user.username %> 
+  </div>
+  <div id='profile-real-name'>
+    <%= user.name %> 
+  </div>
+  <div id='profile-email'>
+    <%= link_to user.email, "mailto: #{user.email}" %> 
+  </div>
+  <div id='profile-website'>
+    <%= link_to user.email, "mailto: #{user.email}" %> 
+  </div>
+  <div id='profile-github'>
+    <%= link_to "Github", format_github(user) %> 
+  </div>
+  <div id='profile-stack-overflow'>
+    <%= link_to "Stack Overflow", format_stack_overflow(user) %> 
+  </div>
+  
+</div>

@@ -18,7 +18,7 @@ OutilWeb::Application.routes.draw do
   get "login" => 'login#index'
   post "login/submit"
 
-  get "profile/mine"
+  get "profile/mine", :as => :profile
   get "profile/edit"
   post "profile/submit"
   get "users/:username" => 'profile#show'

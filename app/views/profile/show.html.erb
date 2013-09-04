@@ -1,0 +1,9 @@
+<div id='profile'>
+  <div id='profile-user-name'>
+    <h1>
+      <%= @user.username %> 
+    </h1>
+  </div>
+  <%= render partial: 'shared/utility_list_with_buttons', locals: {utilities: @utilities} %>
+  <%= render partial: 'shared/generic_profile_side', locals: {user: @user} %>
+</div>

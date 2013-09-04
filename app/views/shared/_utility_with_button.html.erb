@@ -1,0 +1,11 @@
+<div class='utility-box-with-buttons'>
+  <div class='utility-name'>
+    <%= link_to utility.name, url_for(:controller => :utility, :action => :show, :utilityname => utility.name, :username => user) %>
+  </div>
+  <div class='utility-description'>
+    <%= utility.description %>
+  </div>
+  <div class='take-button'>
+    <%= link_to "Take", url_for(:controller => :utility, :action => :take, :utilityname => utility.name, :username => user) %>
+  </div>
+</div>
