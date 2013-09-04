@@ -12,7 +12,15 @@ class ProfileController < ApplicationController
   end
 
   def submit
-
+    unless params[:user]
+      redirect_to "profile#edit"
+    end
+    @user = current_user
+    unless @user.update(params[:user])
+      redirect_to "profile#edit"
+    else
+      render action: :mine
+    end
   end
 
   def show

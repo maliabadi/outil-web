@@ -20,12 +20,12 @@ OutilWeb::Application.routes.draw do
 
   get "profile/mine", :as => :profile
   get "profile/edit"
-  post "profile/submit"
+  get "profile/submit"
   get "users/:username" => 'profile#show'
 
   get "users/:username/:utilityname" => 'utility#show'
   get "users/:username/:utilityname/edit" => 'utility#edit'
-  post "users/:username/:utilityname/submit" => 'utility#submit'
+  get "users/:username/:utilityname/submit" => 'utility#submit'
   get "users/:username/:utilityname/run" => 'utility#run'
   get "users/:username/:utilityname/assert" => 'utility#assert'
   get "users/:username/:utilityname/versions" => 'utility#versions'

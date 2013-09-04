@@ -1,0 +1,11 @@
+<div class="profile-editor">
+  <%= form_for(@user, url: {action: "submit"}) do |f| %>
+    <%= f.hidden_field :id, %>
+    User Name: <%= f.text_field :username %>
+    Real Name: <%= f.text_field :name %>
+    Email: <%= f.text_field :email %>
+    Website: <%= f.text_field :website %>
+    Github Username: <%= f.text_field :github %>
+    Stack Overlfow Username: <%= f.text_field :stack_overflow %>
+  <% end %>  
+</div>
