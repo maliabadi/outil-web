@@ -1,0 +1,9 @@
+one:
+  name: Ray Crock
+  email: raycrock@gmail.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+
+two:
+  name: Dave Thomas
+  email: davethomas@gmail.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>

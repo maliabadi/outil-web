@@ -1,0 +1,11 @@
+one:
+  version_id: 1
+  user_id: 1
+
+two:
+  version_id: 2
+  user_id: 2
+
+three:
+  version_id: 1
+  user_id: 2
