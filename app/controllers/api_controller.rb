@@ -1,4 +1,8 @@
 class ApiController < ApplicationController
+  # TODO
+  # The data specificiation needs to get fleshed
+  # out a bit more before the web interface
+  # is ready to talk about this  
 
   def publish
     # client says "publish my localized utilities(s)"
